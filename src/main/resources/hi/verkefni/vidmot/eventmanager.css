@@ -1,0 +1,65 @@
+.event-line {
+    -fx-spacing: 10;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 5 10;
+}
+
+.event-line .label {
+    -fx-alignment: CENTER;
+    -fx-min-width: 150px;
+    -fx-pref-width: 150px;
+    -fx-max-width: 150px;
+    -fx-font-weight: bold;
+}
+
+.selection-field {
+    -fx-min-width: 150px;
+    -fx-pref-width: 250px;
+    -fx-max-width: Infinity;
+}
+
+.mediaView {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10 20;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-background-radius: 8;
+}
+
+.player {
+    -fx-max-height: 300px;
+    -fx-pref-height: 300px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+    -fx-border-color: #ddd;
+    -fx-border-radius: 4;
+}
+
+.media-controls {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+.media-controls Button {
+    -fx-font-size: 16px;
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 4;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4;
+    -fx-padding: 5 15;
+    -fx-cursor: hand;
+}
+
+.media-controls Button:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+.media-controls Slider {
+    -fx-pref-width: 150px;
+}
+
+.half-field {
+    -fx-pref-width: 120px;
+    -fx-min-width: 80px;
+    -fx-max-width: 150px;
+}

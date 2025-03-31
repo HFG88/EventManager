@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane stylesheets="@eventmanager.css"
+            xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="hi.verkefni.vidmot.EventManagerController">
+    <top>
+        <fx:include source="menu-view.fxml"/>
+    </top>
+    <center>
+        <StackPane fx:id="fxEventViews" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

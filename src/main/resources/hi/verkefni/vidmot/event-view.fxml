@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<fx:root stylesheets="@eventmanager.css" type="javafx.scene.layout.VBox"
+         xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+        <HBox spacing="10.0" styleClass="event-line">
+            <children>
+                <Label styleClass="label" text="Heiti"/>
+                <TextField styleClass="selection-field" fx:id="fxHeiti"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0" styleClass="event-line">
+            <children>
+                <Label styleClass="label" text="Flokkur"/>
+                <ComboBox styleClass="selection-field" fx:id="fxFlokkur"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0" styleClass="event-line">
+            <children>
+                <Label styleClass="label" text="Dagsetning"/>
+                <DatePicker styleClass="selection-field" fx:id="fxDagsetning"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0" styleClass="event-line">
+            <children>
+                <Label styleClass="label" text="Tími (Klst/Min)"/>
+                <Spinner fx:id="fxHours" styleClass="half-field"/>
+                <Spinner fx:id="fxMinutes" styleClass="half-field"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0" styleClass="event-line">
+            <children>
+                <Label styleClass="label" text="Kynningarmyndband"/>
+                <Button fx:id="fxBtnVeljaMyndband" text="Velja myndband"/>
+            </children>
+        </HBox>
+
+
+    </children>
+</fx:root>

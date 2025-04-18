@@ -1,0 +1,52 @@
+/* ================================
+   Event Editor
+================================ */
+
+/* Layout for each form row */
+.event-line {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10;
+    -fx-padding: 5 0;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #334e68;
+    -fx-font-weight: bold;
+    -fx-min-width: 150px; /* keeps form labels aligned */
+}
+
+/* Shared input style */
+.input {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #ccddee;
+    -fx-padding: 6 8;
+    -fx-background-color: white;
+}
+
+/* Focus effect */
+.input:focused {
+    -fx-border-color: #7b9acc;
+    -fx-effect: dropshadow(gaussian, rgba(120, 140, 200, 0.2), 6, 0.3, 0, 1);
+}
+
+/* Spinner-specific width */
+.half-field {
+    -fx-pref-width: 60px;
+}
+
+/* Optional: if you want to target ComboBox, DatePicker, etc. */
+.combo-box, .date-picker {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #ccddee;
+    -fx-background-color: white;
+    -fx-padding: 6 8;
+}
+
+.combo-box:focused, .date-picker:focused {
+    -fx-border-color: #7b9acc;
+    -fx-effect: dropshadow(gaussian, rgba(120, 140, 200, 0.2), 6, 0.3, 0, 1);
+}

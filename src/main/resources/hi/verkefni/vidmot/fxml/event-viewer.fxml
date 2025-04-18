@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.MediaView?>
+
+<VBox spacing="16" alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hi.verkefni.vidmot.view.EventViewerController"
+      stylesheets="@../css/general.css"
+      styleClass="viewer-root">
+
+    <Label fx:id="fxHeiti" styleClass="label-header"/>
+    <Label fx:id="fxFlokkur" styleClass="label-subheader"/>
+    <Label fx:id="fxDagsetning"/>
+
+    <MediaView fx:id="fxMediaView" fitWidth="640" fitHeight="360" preserveRatio="true"/>
+
+    <Button fx:id="fxToProfileButton" text="%profile.toProfile" onAction="#onToProfilePressed"/>
+    <Button fx:id="fxEditButton" text="%profile.edit" onAction="#onEditPressed"/>
+
+
+</VBox>

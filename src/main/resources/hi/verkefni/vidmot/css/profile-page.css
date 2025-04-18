@@ -1,0 +1,52 @@
+/* ================================
+   Profile Page Specific Styles
+================================ */
+
+/* --- Header Bar Additions --- */
+.header-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+/* Welcome label spacing override (optional) */
+#fxWelcomeLabel {
+    -fx-padding: 0;
+}
+
+/* --- Event List Area --- */
+#fxCreatedList,
+#fxAccessibleList {
+    -fx-padding: 5;
+}
+
+/* --- ScrollPane Tweaks --- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+/* --- Card Overrides (already styled in general) --- */
+.event-card {
+    -fx-spacing: 15; /* wider spacing between label and buttons */
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* --- Button Grouping --- */
+.event-button {
+    -fx-padding: 6 12;
+}
+
+/* --- Logout Button Area --- */
+.bottom-button-area {
+    -fx-background-color: transparent;
+    -fx-padding: 10 20;
+}
+
+/* Optional: Adjust logout button alignment */
+#fxLogoutBtn {
+    -fx-translate-x: -10;
+}

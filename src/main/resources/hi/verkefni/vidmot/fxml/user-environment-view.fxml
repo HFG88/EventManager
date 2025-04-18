@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+<?import hi.verkefni.vidmot.components.LanguageButton?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17.0.2"
+            fx:controller="hi.verkefni.vidmot.view.UserEnvironmentView"
+stylesheets="@../css/general.css,@../css/profile-page.css">
+
+    <!-- Top Header -->
+    <top>
+        <StackPane prefHeight="50" styleClass="header-bar" BorderPane.alignment="CENTER">
+            <children>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <children>
+                        <Circle fx:id="fxProfileCircle" radius="15"/>
+                        <Label fx:id="fxWelcomeLabel" text="%profile.welcome" styleClass="label-header"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+                <LanguageButton StackPane.alignment="TOP_RIGHT"/>
+            </children>
+        </StackPane>
+    </top>
+
+    <!-- Center content -->
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Button fx:id="fxCreateEventBtn" text="%profile.newEvent" onAction="#onCreateEvent" styleClass="button-primary"/>
+
+            <!-- Created Events -->
+            <Label text="%profile.created" styleClass="label-subheader"/>
+            <ScrollPane fitToWidth="true">
+                <content>
+                    <VBox fx:id="fxCreatedList" spacing="10"/>
+                </content>
+            </ScrollPane>
+
+            <!-- Accessible Events -->
+            <Label text="%profile.accessible" styleClass="label-subheader"/>
+            <ScrollPane fitToWidth="true">
+                <content>
+                    <VBox fx:id="fxAccessibleList" spacing="10"/>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+    <!-- Bottom Logout -->
+    <bottom>
+        <StackPane alignment="CENTER_RIGHT">
+            <Button fx:id="fxLogoutBtn" text="%profile.logout" onAction="#onLogoutPressed" styleClass="button-primary"/>
+        </StackPane>
+    </bottom>
+</BorderPane>

@@ -1,4 +1,4 @@
-package hi.verkefni.vidmot;
+package hi.verkefni.vidmot.components;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,10 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
-import javafx.stage.FileChooser;
 import javafx.util.Duration;
-
-import java.io.File;
 
 
 public class KynningController {
@@ -29,6 +26,7 @@ public class KynningController {
 
     /**
      * Getter fyrir mediaPlayer
+     *
      * @return mediaPlayer
      */
     public MediaPlayer getMediaPlayer() {
@@ -38,6 +36,7 @@ public class KynningController {
 
     /**
      * Setter fyrir media
+     *
      * @param media
      */
     public void setMedia(Media media) {
@@ -77,8 +76,7 @@ public class KynningController {
             mediaPlayer.play();
             System.out.println("play " + mediaPlayer.getStatus());
             playButton.setText("| |");
-        }
-        else {
+        } else {
             mediaPlayer.pause();
             System.out.println("pause " + mediaPlayer.getStatus());
             playButton.setText("▶");

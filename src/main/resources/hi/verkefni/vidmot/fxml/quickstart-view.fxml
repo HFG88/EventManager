@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import hi.verkefni.vidmot.components.LanguageButton?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="hi.verkefni.vidmot.view.QuickStartController"
+           stylesheets="@../css/general.css"
+           prefWidth="600" prefHeight="500"
+           styleClass="quickstart-view"
+           style="-fx-padding: 20 20 0 0;">
+
+    <!-- Translucent card -->
+    <VBox alignment="CENTER"
+          spacing="20.0"
+          styleClass="card-background"
+          maxWidth="600"
+          maxHeight="600"
+          StackPane.alignment="CENTER">
+
+        <padding>
+            <Insets top="40" left="20" right="20" bottom="20"/>
+        </padding>
+
+        <Label text="%quickstart.header" styleClass="header-label"/>
+        <Label fx:id="fxWelcomeLabel"  styleClass="label-welcome"/>
+        <Label text="%quickstart.description" wrapText="true" styleClass="description-label" maxWidth="500"/>
+
+        <Button fx:id="fxCreateEventButton" text="%quickstart.create" styleClass="primary-button" onAction="#onCreateEvent"/>
+        <Button fx:id="fxViewEventsButton" text="%quickstart.view" styleClass="primary-button" onAction="#onViewEvents"/>
+
+        <Label text="%quickstart.tip" styleClass="tip-label" wrapText="true" maxWidth="480"/>
+    </VBox>
+
+    <!-- Language button in the top right corner -->
+    <LanguageButton StackPane.alignment="TOP_RIGHT"/>
+
+
+</StackPane>

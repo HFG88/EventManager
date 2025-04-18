@@ -9,39 +9,46 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<fx:root stylesheets="@eventmanager.css" type="javafx.scene.layout.VBox"
+<fx:root stylesheets="@../css/general.css" type="javafx.scene.layout.VBox"
          xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1">
 
     <children>
         <HBox spacing="10.0" styleClass="event-line">
             <children>
-                <Label styleClass="label" text="Heiti"/>
+                <Label styleClass="label" fx:id="fxHeitiL" text="%fxHeitiL"/>
                 <TextField styleClass="selection-field" fx:id="fxHeiti"/>
             </children>
         </HBox>
         <HBox spacing="10.0" styleClass="event-line">
             <children>
-                <Label styleClass="label" text="Flokkur"/>
+                <Label styleClass="label" fx:id="fxFlokkurL" text="%fxFlokkurL"/>
                 <ComboBox styleClass="selection-field" fx:id="fxFlokkur"/>
             </children>
         </HBox>
         <HBox spacing="10.0" styleClass="event-line">
             <children>
-                <Label styleClass="label" text="Dagsetning"/>
+                <Label styleClass="label" fx:id="fxDagsetningL" text="%fxDagsetningL"/>
                 <DatePicker styleClass="selection-field" fx:id="fxDagsetning"/>
             </children>
         </HBox>
         <HBox spacing="10.0" styleClass="event-line">
             <children>
-                <Label styleClass="label" text="Tími (Klst/Min)"/>
+                <Label styleClass="label" fx:id="fxKlst" text="%fxKlst"/>
+
                 <Spinner fx:id="fxHours" styleClass="half-field"/>
                 <Spinner fx:id="fxMinutes" styleClass="half-field"/>
             </children>
         </HBox>
         <HBox spacing="10.0" styleClass="event-line">
             <children>
-                <Label styleClass="label" text="Kynningarmyndband"/>
-                <Button fx:id="fxBtnVeljaMyndband" text="Velja myndband"/>
+                <Label fx:id="fxKynningarmyndband" styleClass="label" text="%fxKynningarmyndband"/>
+                <Button fx:id="fxBtnVeljaMyndband" text="%fxBtnVeljaMyndband"/>
+            </children>
+        </HBox>
+        <HBox spacing="10.0" styleClass="event-line">
+            <children>
+                <Label fx:id="fxKortMyndL" styleClass="label" text="%fxKortMyndL"/>
+                <Button fx:id="fxBtnVeljaKort" text="%fxBtnVeljaKort"/>
             </children>
         </HBox>
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import hi.verkefni.vidmot.components.EventEditor?>
+<?import javafx.geometry.Insets?>
+<?import hi.verkefni.vidmot.components.LanguageButton?>
+
+<BorderPane stylesheets="@../css/general.css, @../css/event-manager-page.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="hi.verkefni.vidmot.view.EventManagerView">
+
+    <top>
+        <fx:include fx:id="fxMenu" source="menu-view.fxml"/>
+    </top>
+
+    <center>
+        <StackPane alignment="CENTER">
+            <BorderPane maxWidth="800">
+                <top>
+                    <StackPane styleClass="header-bar" prefHeight="50">
+                        <children>
+                            <Label fx:id="fxWelcomeLabel" styleClass="label-header" BorderPane.alignment="CENTER"/>
+                            <LanguageButton StackPane.alignment="TOP_RIGHT"/>
+                        </children>
+                    </StackPane>
+                </top>
+
+                <center>
+                    <VBox spacing="20" alignment="CENTER">
+                        <padding>
+                            <Insets top="30" bottom="30" left="30" right="30"/>
+                        </padding>
+
+                        <EventEditor fx:id="fxEventView"/>
+
+                        <VBox spacing="10" styleClass="access-list-section" maxWidth="600">
+                            <CheckBox fx:id="fxGrantToAll" text="Grant access to everyone"/>
+                            <Label text="Select users who can view this event:"/>
+                            <ScrollPane fitToWidth="true" prefHeight="120">
+                                <content>
+                                    <VBox fx:id="fxAccessUserList" spacing="5">
+                                        <padding>
+                                            <Insets top="10" right="10" bottom="10" left="10"/>
+                                        </padding>
+                                    </VBox>
+                                </content>
+                            </ScrollPane>
+                        </VBox>
+                    </VBox>
+                </center>
+            </BorderPane>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button fx:id="fxBackToProfile" text="%button.back" onAction="#onBackToProfile"/>
+            <Button fx:id="fxViewOnly" text="%event.view" onAction="#onViewOnly"/>
+        </HBox>
+    </bottom>
+</BorderPane>
